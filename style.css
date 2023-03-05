@@ -1,0 +1,19 @@
+.screenbox {
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+}
+
+body {
+  background-color: red;
+}
+img {
+  width: 500px;
+  height: auto;
+}
+
+body:hover {
+  background-image: url(/images/2.png);
+  background-image: 200px;
+  background-repeat: no-repeat;
+}
