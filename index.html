@@ -98,13 +98,63 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="cybercafe" startnode="1" creator="Twine" creator-version="2.6.2" format="SugarCube" format-version="2.36.1" ifid="EE23B879-D0C9-4FBD-BF0E-D82CFC1072E2" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="525,425" size="100,100">Welcome to cybercafe splash page. 
+	<tw-storydata name="cybercafe" startnode="1" creator="Twine" creator-version="2.6.2" format="SugarCube" format-version="2.36.1" ifid="EE23B879-D0C9-4FBD-BF0E-D82CFC1072E2" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/*
+#ui-bar {
+  display: none;
+}
 
-&lt;!--upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg--&gt;
+body {
+  margin-left: 3.5em;
+}
+*/
 
 
-&lt;img src=&quot;images/cybercafepic01.jpg&quot; /&gt;
-&lt;img src=&quot;images/1408x792.webp&quot; /&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*
+Hides the default sidebar and moves the main area to the left to compensate for its absence 
+*/
+$('#ui-bar').remove();
+$(document.head).find('#style-ui-bar').remove();</script><tw-passagedata pid="1" name="home" tags="" position="525,425" size="100,100">Welcome to cybercafe splash page. 
+
+[[about]]
+[[bibliography]]
+[[enter the cafe]]
+
+</tw-passagedata><tw-passagedata pid="2" name="about" tags="" position="525,550" size="100,100">here we talk about why we think all this is interesting
+
+link to our studio&#39;s website someday
+link to our personal sites</tw-passagedata><tw-passagedata pid="3" name="bibliography" tags="" position="650,550" size="100,100">link to articles we found to be informative
+link to our spreadsheet of images</tw-passagedata><tw-passagedata pid="4" name="enter the cafe" tags="" position="400,550" size="100,100">&lt;&lt;set $imagechoice to random (5)&gt;&gt;
+
+Randomized/spatialized cafe pics go here
+
+prints the variable for debugging: 
+	&lt;&lt;print $imagechoice&gt;&gt;
+
+&lt;img @src=&quot;&#39;images/image&#39; + $imagechoice + &#39;.jpg&#39;&quot; width=&quot;100%&quot;&gt;
+
+&lt;&lt;if $imagechoice is 0&gt;&gt; 
+Location Unknown, 6/8/2017,	Courtesy Sajjad mp, Creative Commons Attribution-Share Alike 4.0 International
+&lt;&lt;elseif $imagechoice is 1&gt;&gt;
+Liverpool, England	9/9/1995, Image: Mirrorpix
+&lt;&lt;elseif $imagechoice is 2&gt;&gt;
+Liverpool, England	6/19/1995, Image: Mirrorpix
+&lt;&lt;elseif $imagechoice is 3&gt;&gt;
+Salt Lake City, Utah	2/16/2002	Dave O,  Creative Commons Attribution-Share Alike 2.0 Generic	Cart for the 2002 winter olympics
+&lt;&lt;elseif $imagechoice is 4&gt;&gt;
+?	?	? Chiamaka Chijioke
+&lt;&lt;elseif $imagechoice is 5&gt;&gt;
+?	?	?
+&lt;&lt;/if&gt;&gt;
+
+[[lounge longer in the cybercafe|enter the cafe]]
+[[leave the cybercafe|home]]
+
+/*
+this also works, but not sure how to integrate html attributes
+
+[img[&quot;images/image&quot; + $imagechoice + &quot;.jpg&quot; ]]
+*/
+
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
