@@ -159,26 +159,32 @@ margin: 0 auto;
 #story {
 	margin-top:0px;
 	padding-top:none;
-  	background-color:Black; 
+  	/*background-color:Black; */
 }
 
 /*####EVERYTHING ENTER THE CAFE SHOULD BE HERE####*/
 
 #passage-enter-the-cafe {
-  background-color:yellow;
-	width:1200px;
-	top:0px;
+background-color:yellow;
+	width:140%;
+    /*max-height: 20vh;
+  max-width: 180vh;
+   	top:0px;*/
 }
 
 .imagebox{
   /*
   position: absolute;
-  width:100%;
-  height:80%;
+  width:100%;  
+  height:40%;
+  max-height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
   */
-  padding-top:none;
-  margin-top:-9%;
-  margin-left: 10%;
+ padding-top:none;
+  margin-top:-10%;
+  margin-left: 5%;
+  border: 3px solid #73AD21;     
 }
 
 div.absolutethree {
@@ -186,10 +192,11 @@ div.absolutethree {
   	top: 460px;
   	left: 65px;
  	 z-index:+1;
- 	 border: 3px solid #73AD21;
-	 background: #99ccff;
+ 	/* border: 3px solid #73AD21;*/
+	 background: #40ff00;
 	font-family: 'Playfair Display', serif;
-	padding:5px;
+ color: white
+	padding:15px;
   width:200px;
   display:block;
     word-wrap: break-word;
@@ -446,7 +453,7 @@ A note on fair use. Internet cafes all over the world have long been spaces of p
     &lt;/a&gt;&lt;/div&gt;
 &lt;&lt;set $imagechoice to random(324)&gt;&gt;
 &lt;div class = &quot;imagebox&quot;&gt;
-&lt;img @src=&quot;&#39;images/image&#39; + $imagechoice + &#39;.jpg&#39;&quot; width=&quot;100%&quot; height=&quot;80%&quot;&gt;
+&lt;img @src=&quot;&#39;images/image&#39; + $imagechoice + &#39;.jpg&#39;&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;absolutetwo&quot;&gt;
 @@.center;
