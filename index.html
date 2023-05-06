@@ -147,15 +147,32 @@ a:active {
   
 }
 
-.imageinfo{
+div.absolutethree {
+	position: absolute;
+  	top: 460px;
+  	left: 65px;
+ 	 z-index:+1;
+ 	 border: 3px solid #73AD21;
+  background: #99ccff;
+	font-family: 'Playfair Display', serif;
+	padding:5px;
+  width:200px;
+  display:block;
+    word-wrap: break-word;
+
+}
+
+/*.imageinfo{
 	background: #99ccff;
 	font-family: 'Playfair Display', serif;
 	padding:5px;
     background-color: black;
   width:600px;
   display:block;
-  
 }
+*/
+
+
 /*writing-mode: vertical-rl;
   text-orientation: mixed;*/
 
@@ -405,8 +422,7 @@ A note on fair use. Internet cafes all over the world have long been spaces of p
 &lt;a button data-passage=&quot;enter the cafe&quot; class=&quot;myButton&quot;&gt;☕&lt;/a&gt;
 @@
 &lt;/div&gt;
-
-&lt;div class =  &quot;imageinfo&quot;&gt;&lt;&lt;if	$imagechoice is 0	&gt;&gt;	&#39;&#39;	Location:	&#39;&#39;	Unknown	&lt;br&gt;	&#39;&#39;	Date:	&#39;&#39;	6/8/2017	&lt;br&gt;	&#39;&#39;	Image Credit:	&#39;&#39;	Sajjad mp, Creative Commons Attribution-Share Alike 4.0 Internationa	&lt;br&gt;	&#39;&#39;	Found At:	&#39;&#39;	[[	https://commons.wikimedia.org/wiki/File:%D8%B3%D8%AC%D8%A7%D8%AF_%D8%B1%D9%85%D8%B6%D8%A7%D9%86%DB%8C.jpg	]]
+&lt;div class =  &quot;absolutethree&quot;&gt;&lt;&lt;if	$imagechoice is 0	&gt;&gt;	&#39;&#39;	Location:	&#39;&#39;	Unknown	&lt;br&gt;	&#39;&#39;	Date:	&#39;&#39;	6/8/2017	&lt;br&gt;	&#39;&#39;	Image Credit:	&#39;&#39;	Sajjad mp, Creative Commons Attribution-Share Alike 4.0 Internationa	&lt;br&gt;	&#39;&#39;	Found At:	&#39;&#39;	[[	https://commons.wikimedia.org/wiki/File:%D8%B3%D8%AC%D8%A7%D8%AF_%D8%B1%D9%85%D8%B6%D8%A7%D9%86%DB%8C.jpg	]]
 &lt;&lt;elseif	$imagechoice is 1	&gt;&gt;	&#39;&#39;	Location:	&#39;&#39;	Liverpool, England	&lt;br&gt;	&#39;&#39;	Date:	&#39;&#39;	9/9/1995	&lt;br&gt;	&#39;&#39;	Image Credit:	&#39;&#39;	[[Mirrorpix | https://www.mirrorpix.com/]]	&lt;br&gt;	&#39;&#39;	Found At:	&#39;&#39;	[[	https://www.liverpoolecho.co.uk/news/nostalgia/liverpools-first-internet-cafe-opened-25661645	]]
 &lt;&lt;elseif	$imagechoice is 2	&gt;&gt;	&#39;&#39;	Location:	&#39;&#39;	Liverpool, England	&lt;br&gt;	&#39;&#39;	Date:	&#39;&#39;	6/19/1995	&lt;br&gt;	&#39;&#39;	Image Credit:	&#39;&#39;	[[Mirrorpix | https://www.mirrorpix.com/]]	&lt;br&gt;	&#39;&#39;	Found At:	&#39;&#39;	[[	https://www.liverpoolecho.co.uk/news/nostalgia/liverpools-first-internet-cafe-opened-25661645	]]
 &lt;&lt;elseif	$imagechoice is 3	&gt;&gt;	&#39;&#39;	Location:	&#39;&#39;	Salt Lake City, Utah	&lt;br&gt;	&#39;&#39;	Date:	&#39;&#39;	2/16/2002	&lt;br&gt;	&#39;&#39;	Image Credit:	&#39;&#39;	[[Dave O | https://www.flickr.com/people/56205607@N00]]  Creative Commons Attribution-Share Alike 2.0 Generic	&lt;br&gt;	&#39;&#39;	Found At:	&#39;&#39;	[[	https://commons.wikimedia.org/wiki/File:01-wireless-internet-cart_(102497407).jpg	]]
@@ -739,11 +755,11 @@ A note on fair use. Internet cafes all over the world have long been spaces of p
 [[About Us|about]]
 [[Bibliography|bibliography]] 
 */
-<<<<<<< HEAD
+
 /*prints the variable for debugging:  &lt;&lt;print $imagechoice&gt;&gt;*/
 =======
 /*prints the variable for debugging: &lt;&lt;print $imagechoice&gt;&gt;*/
->>>>>>> 91e8699bb4b86665833c8f3a393a16b4ffef27e5
+
 /*
 this also works, but not sure how to integrate html attributes
 [img[&quot;images/image&quot; + $imagechoice + &quot;.jpg&quot; ]]
