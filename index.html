@@ -326,6 +326,13 @@ color: black;
 /*####ENTER THE CAFE####*/
 
 
+@keyframes buttonglow {
+  0% {background: #f4ea00;}
+  50% {background: #ec10ff;}
+  100% {background: #f4ea00;}
+}
+
+
 #passage-enter-the-cafe {
 	width:130%;
     /*background-color:yellow;
@@ -420,6 +427,9 @@ a:active {
 	padding:8px 14px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #528ecc;
+  animation-name: buttonglow;
+  animation-duration:2s;
+  animation-iteration-count: infinite;
 }
 
 .myButton:hover {
