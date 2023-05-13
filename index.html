@@ -391,7 +391,6 @@ color: black;
   100% {background: #f4ea00;}
 }
 
-
 #passage-enter-the-cafe {
 	width:130%;
     /*background-color:yellow;
@@ -400,24 +399,29 @@ color: black;
    	top:0px;*/
 }
 
-.imagebox{
-  /*
-  position: absolute;
-  width:100%;  
-  height:40%;
-  max-height: 40vh;
-  max-width: 100%;
-  object-fit: contain;
-   border: 3px solid #73AD21; */
- padding-top:none;
-  margin-top:-10%;
-  margin-left: 5%;     
+.leftnav {
+	position: fixed;
+  	top: -2%;
+  	left: 5.5%;
+  	z-index:+1;
+  	/*outline: 2px solid red;*/
+}
+
+div.absolutetwo {
+	display: block;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  position:relative;
+  	top: 150px;
+  	left: -25%;
+  z-index:+1;
+  	/*border: 3px solid #73AD21;*/  
 }
 
 div.imageinfobox {
-	position: fixed;
-  	top: 38%;
-  	left: 65px;
+	position: relative;
+  	top: 140px;
+  	left: -25%;
  	z-index:+1;
 	background: #40ff00;
 	font-family: 'roboto', serif, italic;
@@ -434,35 +438,19 @@ div.imageinfobox {
     box-sizing: border-box;
 }
 
-#passage-enter-the-cafe 
-a:link {
-  font-style:italic;
- background-color:transparent;
-  color:white;
-  font-family:playfair;
-  font-weight:bold;
-  font-size:1.15em;
-  text-decoration:underline;
+.imagebox{
+  /*
+  position: absolute;
+  width:100%;  
+  height:40%;
+  max-height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
+   border: 3px solid #73AD21; */
+ padding-top:none;
+  margin-top:-10%;
+  margin-left: 5%;     
 }
-
-#passage-enter-the-cafe 
-a:visited {
-  text-decoration: underline;
-  color:cyan;
-  /*background-color: cyan;*/
-  }
-
-#passage-enter-the-cafe 
-a:hover { 
-  color:lightgreen;
-   /*background-color: lightgreen;*/
-}
-
-#passage-enter-the-cafe 
-a:active {
-  color:hotpink;
-  /*background-color: hotpink;*/
-} 
 
 /*.imageinfo{
 	background: #99ccff;
@@ -500,14 +488,6 @@ a:active {
 	top:1px;
 }
 
-div.absolutetwo {
-	position:fixed;
-  	top: 22%;
-  	left: 5.5%;
-  z-index:+1;
-  	/*border: 3px solid #73AD21;*/  
-}
-
 .bibtitle {
   	color:yellow;
 	font-family: 'Playfair Display', serif;
@@ -518,6 +498,35 @@ div.absolutetwo {
   	margin:0px;
 }
 
+#passage-enter-the-cafe 
+a:link {
+  font-style:italic;
+ background-color:transparent;
+  color:white;
+  font-family:playfair;
+  font-weight:bold;
+  font-size:1.15em;
+  text-decoration:underline;
+}
+
+#passage-enter-the-cafe 
+a:visited {
+  text-decoration: underline;
+  color:cyan;
+  /*background-color: cyan;*/
+  }
+
+#passage-enter-the-cafe 
+a:hover { 
+  color:lightgreen;
+   /*background-color: lightgreen;*/
+}
+
+#passage-enter-the-cafe 
+a:active {
+  color:hotpink;
+  /*background-color: hotpink;*/
+} 
 
 /*####JUNK DRAWER####*/
 
@@ -649,19 +658,16 @@ Background sky image derived from a photo by Vecteezy user [[NARONG KHUEANKAEW |
 [[Home|home]]
 [[About Us|about]]
 [[Enter the Cybercafe|enter the cafe]]
-*/</tw-passagedata><tw-passagedata pid="4" name="enter the cafe" tags="" position="500,475" size="100,100">&lt;div class=&quot;absolute&quot;&gt;
-&lt;a data-passage=&quot;home&quot;&gt;
-	&lt;img src= &quot;images/cybercafehome2.png&quot; style=&quot;max-height: 150px&quot;&gt;
-    &lt;/a&gt;&lt;/div&gt;
-&lt;&lt;set $imagechoice to random(324)&gt;&gt;
-&lt;div class = &quot;imagebox&quot;&gt;
-&lt;img @src=&quot;&#39;images/image&#39; + $imagechoice + &#39;.jpg&#39;&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;absolutetwo&quot;&gt;
-@@.center;
-&lt;a button data-passage=&quot;enter the cafe&quot; class=&quot;myButton&quot;&gt;☕&lt;/a&gt;
-@@
-&lt;/div&gt;
+*/</tw-passagedata><tw-passagedata pid="4" name="enter the cafe" tags="" position="500,475" size="100,100">&lt;&lt;set $imagechoice to random(324)&gt;&gt;
+&lt;div class= &quot;leftnav&quot;&gt;
+	&lt;div class=&quot;absolute&quot;&gt;
+		&lt;a data-passage=&quot;home&quot;&gt;
+		&lt;img src= &quot;images/cybercafehome2.png&quot; style=&quot;max-height: 150px&quot;&gt;				&lt;/a&gt;&lt;/div&gt;
+	&lt;div class=&quot;absolutetwo&quot;&gt;
+	@@.center;
+		&lt;a button data-passage=&quot;enter the cafe&quot; class=&quot;myButton&quot;&gt;☕&lt;/a&gt;
+	@@
+	&lt;/div&gt;
 &lt;div class =  &quot;imageinfobox&quot;&gt;&lt;&lt;if	$imagechoice is 0	&gt;&gt;	&#39;&#39;	Location:	&#39;&#39;	Unknown	&lt;br&gt;	&#39;&#39;	Date:	&#39;&#39;	6/8/2017	&lt;br&gt;	&#39;&#39;	Image Credit:	&#39;&#39;	Sajjad mp, Creative Commons Attribution-Share Alike 4.0 Internationa	&lt;br&gt;	&#39;&#39;	Found At:	&#39;&#39;	[[	https://commons.wikimedia.org/wiki/File:%D8%B3%D8%AC%D8%A7%D8%AF_%D8%B1%D9%85%D8%B6%D8%A7%D9%86%DB%8C.jpg	]]
 &lt;&lt;elseif	$imagechoice is 1	&gt;&gt;	&#39;&#39;	Location:	&#39;&#39;	Liverpool, England	&lt;br&gt;	&#39;&#39;	Date:	&#39;&#39;	9/9/1995	&lt;br&gt;	&#39;&#39;	Image Credit:	&#39;&#39;	[[Mirrorpix | https://www.mirrorpix.com/]]	&lt;br&gt;	&#39;&#39;	Found At:	&#39;&#39;	[[	https://www.liverpoolecho.co.uk/news/nostalgia/liverpools-first-internet-cafe-opened-25661645	]]
 &lt;&lt;elseif	$imagechoice is 2	&gt;&gt;	&#39;&#39;	Location:	&#39;&#39;	Liverpool, England	&lt;br&gt;	&#39;&#39;	Date:	&#39;&#39;	6/19/1995	&lt;br&gt;	&#39;&#39;	Image Credit:	&#39;&#39;	[[Mirrorpix | https://www.mirrorpix.com/]]	&lt;br&gt;	&#39;&#39;	Found At:	&#39;&#39;	[[	https://www.liverpoolecho.co.uk/news/nostalgia/liverpools-first-internet-cafe-opened-25661645	]]
@@ -988,16 +994,18 @@ Background sky image derived from a photo by Vecteezy user [[NARONG KHUEANKAEW |
 &lt;&lt;elseif	$imagechoice is 323	&gt;&gt;	&#39;&#39;	Location:	&#39;&#39;	Unknown	&lt;br&gt;	&#39;&#39;	Date:	&#39;&#39;	Possibly 7/21/ 2001	&lt;br&gt;	&#39;&#39;	Image Credit:	&#39;&#39;	[[Martin Pope | https://12ft.io/proxy?q=https%3A%2F%2Fwww.telegraph.co.uk%2Ffoodanddrink%2F3290457%2FCybercafes-the-crossroads.html]]	&lt;br&gt;	&#39;&#39;	Found At:	&#39;&#39;	[[	https://12ft.io/proxy?q=https%3A%2F%2Fwww.telegraph.co.uk%2Ffoodanddrink%2F3290457%2FCybercafes-the-crossroads.html	]]
 &lt;&lt;elseif	$imagechoice is 324	&gt;&gt;	&#39;&#39;	Location:	&#39;&#39;	Honduras	&lt;br&gt;	&#39;&#39;	Date:	&#39;&#39;	Unknown	&lt;br&gt;	&#39;&#39;	Image Credit:	&#39;&#39;	[[Charles O. Cecil | https://www.alamy.com/stock-photo/?name=Charles+O.+Cecil&amp;pseudoid=E1254FDB-DF64-4FED-9DC1-D15177F5D462&amp;sortBy=relevant]]	&lt;br&gt;	&#39;&#39;	Found At:	&#39;&#39;	[[	https://www.alamy.com/honduras-copan-laundry-and-internet-cafe-image502753024.html?imageid=CA06B5E6-3F3C-4579-8D98-FD472D7CE8D4&amp;p=17678&amp;pn=1&amp;searchId=f15dc025183f8208601466ce66312032&amp;searchtype=11	]]
 &lt;&lt;/if&gt;&gt;&lt;/div&gt; 
-
+&lt;/div&gt;
+&lt;div class = &quot;imagebox&quot;&gt;
+	&lt;img @src=&quot;&#39;images/image&#39; + $imagechoice + &#39;.jpg&#39;&quot; width=&quot;100%&quot; 				height=&quot;100%&quot;&gt;
+&lt;/div&gt;
 /*
 [[leave the cybercafe|home]]
 [[lounge longer in the cybercafe|enter the cafe]]
 [[About Us|about]]
 [[Bibliography|bibliography]] 
-*/
-/*prints the variable for debugging:  &lt;&lt;print $imagechoice&gt;&gt;*/
-/*prints the variable for debugging: &lt;&lt;print $imagechoice&gt;&gt;*/
-/*
+
+prints the variable for debugging: &lt;&lt;print $imagechoice&gt;&gt;
+
 this also works, but not sure how to integrate html attributes
 [img[&quot;images/image&quot; + $imagechoice + &quot;.jpg&quot; ]]
 */
